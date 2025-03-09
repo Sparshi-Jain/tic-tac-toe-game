@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f6f6;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering Game Container */
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tic Tac Toe Board */
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+/* Game Boxes */
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #121111;
+    background-color: #549fe0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.box:disabled {
+    background-color: #9acbf8;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#reset-btn, #new-btn {
+    background-color: #191913;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #333;
+}
+
+/* Turn Indicator */
+#turn-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Winner Message */
+#msg {
+    color: #000000;
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+/* Winner Message Container */
+.msg-container {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+.msg-container.show {
+    display: block;
+}
+
+/* Hide Class */
+.hide {
+    display: none;
+}
